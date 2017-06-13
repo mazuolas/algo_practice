@@ -1,0 +1,267 @@
+[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m[31mF[0m
+
+Failures:
+
+  1) DynamicArray starts out empty
+     [31mFailure/Error: expect(arr.length).to eq(0)[0m
+     [31m[0m
+     [31m  expected: 0[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/dynamic_array_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
+
+  2) DynamicArray pushes/pops items
+     [31mFailure/Error: expect(arr.length).to eq(5)[0m
+     [31m[0m
+     [31m  expected: 5[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/dynamic_array_spec.rb:16:in `block (2 levels) in <top (required)>'[0m
+
+  3) DynamicArray unshifts/shifts items into array
+     [31mFailure/Error: expect(arr.length).to eq(5)[0m
+     [31m[0m
+     [31m  expected: 5[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/dynamic_array_spec.rb:29:in `block (2 levels) in <top (required)>'[0m
+
+  4) DynamicArray raises error when shifting or popping when empty
+     [31mFailure/Error:[0m
+     [31m  expect do[0m
+     [31m    arr.pop[0m
+     [31m  end.to raise_error("index out of bounds")[0m
+     [31m[0m
+     [31m  expected Exception with "index out of bounds" but nothing was raised[0m
+     [36m# ./spec/dynamic_array_spec.rb:41:in `block (2 levels) in <top (required)>'[0m
+
+  5) DynamicArray sets items at an index
+     [31mFailure/Error: 5.times { |i| expect(arr[i]).to eq(i) }[0m
+     [31m[0m
+     [31m  expected: 0[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/dynamic_array_spec.rb:55:in `block (3 levels) in <top (required)>'[0m
+     [36m# ./spec/dynamic_array_spec.rb:55:in `times'[0m
+     [36m# ./spec/dynamic_array_spec.rb:55:in `block (2 levels) in <top (required)>'[0m
+
+  6) DynamicArray raises error when setting outside range
+     [31mFailure/Error:[0m
+     [31m  expect do[0m
+     [31m    arr[5][0m
+     [31m  end.to raise_error("index out of bounds")[0m
+     [31m[0m
+     [31m  expected Exception with "index out of bounds" but nothing was raised[0m
+     [36m# ./spec/dynamic_array_spec.rb:63:in `block (2 levels) in <top (required)>'[0m
+
+  7) DynamicArray internals begins with a capacity of 8
+     [31mFailure/Error: expect(arr.send(:capacity)).to eq(8)[0m
+     [31m[0m
+     [31m  expected: 8[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/dynamic_array_spec.rb:71:in `block (3 levels) in <top (required)>'[0m
+
+  8) DynamicArray internals doubles capacity when filled
+     [31mFailure/Error: expect(arr.send(:capacity)).to eq(8)[0m
+     [31m[0m
+     [31m  expected: 8[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/dynamic_array_spec.rb:83:in `block (4 levels) in <top (required)>'[0m
+     [36m# ./spec/dynamic_array_spec.rb:78:in `times'[0m
+     [36m# ./spec/dynamic_array_spec.rb:78:in `block (3 levels) in <top (required)>'[0m
+
+  9) QueueWithMax enqueues
+     [31mFailure/Error: expect(q.length).to eq(5)[0m
+     [31m[0m
+     [31m  expected: 5[0m
+     [31m       got: nil[0m
+     [31m[0m
+     [31m  (compared using ==)[0m
+     [36m# ./spec/queue_with_max_spec.rb:9:in `block (2 levels) in <top (required)>'[0m
+
+  10) QueueWithMax dequeues
+      [31mFailure/Error: expect(q.length).to eq(0)[0m
+      [31m[0m
+      [31m  expected: 0[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/queue_with_max_spec.rb:20:in `block (2 levels) in <top (required)>'[0m
+
+  11) QueueWithMax returns the correct max while enqueuing
+      [31mFailure/Error: expect(q.max).to eq(max)[0m
+      [31m[0m
+      [31m  expected: 1[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/queue_with_max_spec.rb:29:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/queue_with_max_spec.rb:26:in `times'[0m
+      [36m# ./spec/queue_with_max_spec.rb:26:in `block (2 levels) in <top (required)>'[0m
+
+  12) QueueWithMax returns the correct max while dequeuing
+      [31mFailure/Error: expect(q.max).to eq(max)[0m
+      [31m[0m
+      [31m  expected: 17[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/queue_with_max_spec.rb:40:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/queue_with_max_spec.rb:37:in `each'[0m
+      [36m# ./spec/queue_with_max_spec.rb:37:in `block (2 levels) in <top (required)>'[0m
+
+  13) RingBuffer starts out empty
+      [31mFailure/Error: expect(arr.length).to eq(0)[0m
+      [31m[0m
+      [31m  expected: 0[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
+
+  14) RingBuffer pushes/pops items
+      [31mFailure/Error: expect(arr.length).to eq(5)[0m
+      [31m[0m
+      [31m  expected: 5[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:16:in `block (2 levels) in <top (required)>'[0m
+
+  15) RingBuffer unshifts/shifts items into array
+      [31mFailure/Error: expect(arr.length).to eq(5)[0m
+      [31m[0m
+      [31m  expected: 5[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:29:in `block (2 levels) in <top (required)>'[0m
+
+  16) RingBuffer correctly handles a mix of pushes/pops and shifts/unshifts
+      [31mFailure/Error: expect(arr[i]).to eq(3-i)[0m
+      [31m[0m
+      [31m  expected: 3[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:47:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/ring_buffer_spec.rb:46:in `times'[0m
+      [36m# ./spec/ring_buffer_spec.rb:46:in `block (2 levels) in <top (required)>'[0m
+
+  17) RingBuffer can store more than 8 items
+      [31mFailure/Error: 16.times { |i| expect(arr[i]).to eq(15-i) }[0m
+      [31m[0m
+      [31m  expected: 15[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:62:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/ring_buffer_spec.rb:62:in `times'[0m
+      [36m# ./spec/ring_buffer_spec.rb:62:in `block (2 levels) in <top (required)>'[0m
+
+  18) RingBuffer correctly handles pushes/pops/shifts/unshifts after resizing
+      [31mFailure/Error: expect(arr[i]).to eq(4-i)[0m
+      [31m[0m
+      [31m  expected: 4[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:75:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/ring_buffer_spec.rb:74:in `times'[0m
+      [36m# ./spec/ring_buffer_spec.rb:74:in `block (2 levels) in <top (required)>'[0m
+
+  19) RingBuffer raises error when shifting or popping when empty
+      [31mFailure/Error:[0m
+      [31m  expect do[0m
+      [31m    arr.pop[0m
+      [31m  end.to raise_error("index out of bounds")[0m
+      [31m[0m
+      [31m  expected Exception with "index out of bounds" but nothing was raised[0m
+      [36m# ./spec/ring_buffer_spec.rb:88:in `block (2 levels) in <top (required)>'[0m
+
+  20) RingBuffer sets items at an index
+      [31mFailure/Error: 5.times { |i| expect(arr[i]).to eq(i) }[0m
+      [31m[0m
+      [31m  expected: 0[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:102:in `block (3 levels) in <top (required)>'[0m
+      [36m# ./spec/ring_buffer_spec.rb:102:in `times'[0m
+      [36m# ./spec/ring_buffer_spec.rb:102:in `block (2 levels) in <top (required)>'[0m
+
+  21) RingBuffer raises error when setting outside range
+      [31mFailure/Error:[0m
+      [31m  expect do[0m
+      [31m    arr[5][0m
+      [31m  end.to raise_error("index out of bounds")[0m
+      [31m[0m
+      [31m  expected Exception with "index out of bounds" but nothing was raised[0m
+      [36m# ./spec/ring_buffer_spec.rb:110:in `block (2 levels) in <top (required)>'[0m
+
+  22) RingBuffer internals begins with a capacity of 8
+      [31mFailure/Error: expect(arr.send(:capacity)).to eq(8)[0m
+      [31m[0m
+      [31m  expected: 8[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:118:in `block (3 levels) in <top (required)>'[0m
+
+  23) RingBuffer internals doubles capacity when filled
+      [31mFailure/Error: expect(arr.send(:capacity)).to eq(8)[0m
+      [31m[0m
+      [31m  expected: 8[0m
+      [31m       got: nil[0m
+      [31m[0m
+      [31m  (compared using ==)[0m
+      [36m# ./spec/ring_buffer_spec.rb:130:in `block (4 levels) in <top (required)>'[0m
+      [36m# ./spec/ring_buffer_spec.rb:125:in `times'[0m
+      [36m# ./spec/ring_buffer_spec.rb:125:in `block (3 levels) in <top (required)>'[0m
+
+  24) RingBuffer internals shifts/unshifts without O(n) copying
+      [31mFailure/Error: expect(arr.send(:store)).to have_received(:[]=).exactly(8).times[0m
+      [31m[0m
+      [31m  (nil).[]=(*(any args))[0m
+      [31m      expected: 8 times with any arguments[0m
+      [31m      received: 0 times with any arguments[0m
+      [36m# ./spec/ring_buffer_spec.rb:148:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.0183 seconds (files took 0.06754 seconds to load)
+[31m24 examples, 24 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/dynamic_array_spec.rb:4[0m [36m# DynamicArray starts out empty[0m
+[31mrspec ./spec/dynamic_array_spec.rb:12[0m [36m# DynamicArray pushes/pops items[0m
+[31mrspec ./spec/dynamic_array_spec.rb:25[0m [36m# DynamicArray unshifts/shifts items into array[0m
+[31mrspec ./spec/dynamic_array_spec.rb:38[0m [36m# DynamicArray raises error when shifting or popping when empty[0m
+[31mrspec ./spec/dynamic_array_spec.rb:50[0m [36m# DynamicArray sets items at an index[0m
+[31mrspec ./spec/dynamic_array_spec.rb:58[0m [36m# DynamicArray raises error when setting outside range[0m
+[31mrspec ./spec/dynamic_array_spec.rb:69[0m [36m# DynamicArray internals begins with a capacity of 8[0m
+[31mrspec ./spec/dynamic_array_spec.rb:74[0m [36m# DynamicArray internals doubles capacity when filled[0m
+[31mrspec ./spec/queue_with_max_spec.rb:4[0m [36m# QueueWithMax enqueues[0m
+[31mrspec ./spec/queue_with_max_spec.rb:12[0m [36m# QueueWithMax dequeues[0m
+[31mrspec ./spec/queue_with_max_spec.rb:23[0m [36m# QueueWithMax returns the correct max while enqueuing[0m
+[31mrspec ./spec/queue_with_max_spec.rb:33[0m [36m# QueueWithMax returns the correct max while dequeuing[0m
+[31mrspec ./spec/ring_buffer_spec.rb:4[0m [36m# RingBuffer starts out empty[0m
+[31mrspec ./spec/ring_buffer_spec.rb:12[0m [36m# RingBuffer pushes/pops items[0m
+[31mrspec ./spec/ring_buffer_spec.rb:25[0m [36m# RingBuffer unshifts/shifts items into array[0m
+[31mrspec ./spec/ring_buffer_spec.rb:38[0m [36m# RingBuffer correctly handles a mix of pushes/pops and shifts/unshifts[0m
+[31mrspec ./spec/ring_buffer_spec.rb:57[0m [36m# RingBuffer can store more than 8 items[0m
+[31mrspec ./spec/ring_buffer_spec.rb:66[0m [36m# RingBuffer correctly handles pushes/pops/shifts/unshifts after resizing[0m
+[31mrspec ./spec/ring_buffer_spec.rb:85[0m [36m# RingBuffer raises error when shifting or popping when empty[0m
+[31mrspec ./spec/ring_buffer_spec.rb:97[0m [36m# RingBuffer sets items at an index[0m
+[31mrspec ./spec/ring_buffer_spec.rb:105[0m [36m# RingBuffer raises error when setting outside range[0m
+[31mrspec ./spec/ring_buffer_spec.rb:116[0m [36m# RingBuffer internals begins with a capacity of 8[0m
+[31mrspec ./spec/ring_buffer_spec.rb:121[0m [36m# RingBuffer internals doubles capacity when filled[0m
+[31mrspec ./spec/ring_buffer_spec.rb:139[0m [36m# RingBuffer internals shifts/unshifts without O(n) copying[0m
+
