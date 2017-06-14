@@ -20,7 +20,6 @@ class QueueWithMax
     if @max_stack.length == 0 || val <= @max_stack[@max_stack.length-1]
       @max_stack.push(val)
     else
-      p @max_stack
       until @max_stack.length == 0 || val <= @max_stack[@max_stack.length-1]
         @max_stack.pop
       end

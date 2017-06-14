@@ -1,0 +1,2 @@
+single element appears once, everything else once, sorted array time O(logn) space O(1)
+string with (){}[] well formed if in the right order
